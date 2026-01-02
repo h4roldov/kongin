@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kongin"
+version = "0.4.0"
+description = "A Python OAI-PMH client for harvesting repositories with typed access and DSpace export"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Haroldo Vivallo", email = "h.vivallo@gmail.com"}
+]
+keywords = ["oai-pmh", "oai", "metadata", "harvesting", "dspace", "repository"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.20.0",
+    "lxml>=4.6.0",
+]
+
+[project.optional-dependencies]
+web = [
+    "streamlit>=1.28.0",
+    "pandas>=2.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/h4roldov/kongin"
+Repository = "https://github.com/h4roldov/kongin"
+Documentation = "https://github.com/h4roldov/kongin#readme"
+
+[project.scripts]
+kongin = "kongin.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kongin*"]
+exclude = ["tests*", "env*"]
