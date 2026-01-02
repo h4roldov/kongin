@@ -1,5 +1,9 @@
 # Kongin
 
+[![PyPI version](https://img.shields.io/pypi/v/kongin.svg)](https://pypi.org/project/kongin/)
+[![Python versions](https://img.shields.io/pypi/pyversions/kongin.svg)](https://pypi.org/project/kongin/)
+[![License](https://img.shields.io/pypi/l/kongin.svg)](https://github.com/h4roldov/kongin/blob/main/LICENSE)
+
 Kongin es un cliente Python para OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting). Proporciona acceso tipado a registros de metadatos y exportacion facil al formato REST API de DSpace.
 
 ## Caracteristicas
